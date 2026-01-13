@@ -1,0 +1,192 @@
+.kalshi-pulse-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.kalshi-pulse-btn {
+  background: #09c285;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(9, 194, 133, 0.2);
+}
+
+.kalshi-pulse-btn:hover:not(:disabled) {
+  background: #07a372;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(9, 194, 133, 0.3);
+}
+
+.kalshi-pulse-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.kalshi-pulse-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.kalshi-pulse-modal {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #999;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.kalshi-pulse-modal h2 {
+  color: #09c285;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.kalshi-pulse-modal h3 {
+  color: #333;
+  font-size: 18px;
+  margin: 5px 0 20px 0;
+  font-weight: 500;
+}
+
+.price-info {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.price-info > div {
+  text-align: center;
+  font-size: 14px;
+}
+
+.price-info strong {
+  display: block;
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.change {
+  font-weight: 700 !important;
+  font-size: 18px !important;
+}
+
+.change.positive {
+  color: #09c285;
+}
+
+.change.negative {
+  color: #e74c3c;
+}
+
+.comment-info {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.analysis-content {
+  line-height: 1.8;
+  color: #333;
+  font-size: 15px;
+}
+
+.analysis-content strong {
+  color: #000;
+  font-size: 17px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.analysis-content li {
+  margin: 10px 0;
+  margin-left: 25px;
+  padding-left: 10px;
+  border-left: 3px solid #09c285;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(30px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+/* Scrollbar styling for modal */
+.kalshi-pulse-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.kalshi-pulse-modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.kalshi-pulse-modal::-webkit-scrollbar-thumb {
+  background: #09c285;
+  border-radius: 10px;
+}
+
+.kalshi-pulse-modal::-webkit-scrollbar-thumb:hover {
+  background: #07a372;
+}
+

@@ -1,0 +1,14 @@
+{
+  "name": "kalshi-pulse-extension",
+  "version": "0.1.0",
+  "description": "Chrome extension for Kalshi Pulse",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.251",
+    "typescript": "^5.3.3"
+  }
+}
+
