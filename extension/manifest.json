@@ -4,9 +4,17 @@
   "version": "0.1.0",
   "description": "AI-powered analysis for Kalshi prediction markets",
   "permissions": ["storage"],
-  "host_permissions": ["https://kalshi.com/*", "http://localhost:3000/*"],
+  "host_permissions": [
+    "https://kalshi.com/*", 
+    "http://localhost:3000/*",
+    "https://*.ngrok-free.dev/*",
+    "https://*.ngrok.io/*"
+  ],
   "content_scripts": [{
-    "matches": ["https://kalshi.com/markets/*"],
+    "matches": [
+      "https://kalshi.com/markets/*",
+      "https://kalshi.com/sports/*"
+    ],
     "js": ["content.js"],
     "css": ["styles.css"],
     "run_at": "document_idle"

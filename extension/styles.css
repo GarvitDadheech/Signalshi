@@ -5,6 +5,21 @@
   flex-wrap: wrap;
 }
 
+.kalshi-pulse-floating {
+  animation: slideInUp 0.3s ease;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .kalshi-pulse-btn {
   background: #09c285;
   color: white;

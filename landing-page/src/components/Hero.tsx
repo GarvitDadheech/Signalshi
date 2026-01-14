@@ -24,7 +24,12 @@ export default function Hero() {
 
           {/* Subheading */}
           <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl mx-auto font-semibold px-4">
-            Real-time Kalshi market intelligence. Instant research. Clear sentiment.
+            Real-time Kalshi market intelligence.
+          </p>
+
+          {/* Secondary Subheading */}
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4 mt-2">
+            Save your time, analyze fast and bet faster.
           </p>
 
           {/* CTA Buttons */}
